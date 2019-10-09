@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./:/var/myblog
+      - ./docker/nginx/nginx.conf:/etc/nginx/nginx.conf
+    ports:
+      - 80:80
+    depends_on:
+      - php
+      - composer
+  php:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - ./:/var/www/myblog
+    environment:
+      - XDEBUG_CONFIG=remote_host=host.docker.internal
+      - PHP_IDE_CONFIG=serverName=myblog
+  composer:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    volumes:
+      - ./:/var/www/myblog
+    command: bash -c "composer install"
+    depends_on:
+      - php
