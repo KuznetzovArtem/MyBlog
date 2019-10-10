@@ -7,6 +7,8 @@ RUN apt-get update && apt-get install -y \
     zip \
     unzip \
     curl \
+    cmake \
+    make \
     mc \
     curl \
     libz-dev \
@@ -18,7 +20,8 @@ RUN apt-get update && apt-get install -y \
     libcurl4-gnutls-dev \
     libxml2-dev \
     libpcre3 \
-    libpcre3-dev
+    libpcre3-dev \
+    && docker-php-ext-install bcmath && docker-php-ext-enable bcmath
 
 RUN pecl install xdebug-2.6.1 && docker-php-ext-enable xdebug
 
