@@ -1,0 +1,12 @@
+/blog/node_modules
+/blog/public/hot
+/blog/public/storage
+/blog/storage/*.key
+/blog/vendor
+/blog/.env
+/blog/.env.backup
+/blog/.phpunit.result.cache
+/blog/Homestead.json
+/blog/Homestead.yaml
+/blog/npm-debug.log
+/blog/yarn-error.log

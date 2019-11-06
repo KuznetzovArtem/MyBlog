@@ -1,5 +1,6 @@
 FROM php:7.2-fpm
 
+RUN echo 'deb http://ftp.de.debian.org/debian stretch main' >> /etc/apt/sources.list
 RUN apt-get update && apt-get install -y \
     htop \
     git \
@@ -10,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     cmake \
     make \
     mc \
+    libpq-dev \
     curl \
     libz-dev \
     libmemcached-dev \
@@ -22,6 +24,10 @@ RUN apt-get update && apt-get install -y \
     libpcre3 \
     libpcre3-dev \
     && docker-php-ext-install bcmath && docker-php-ext-enable bcmath
+
+RUN docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql
+
+RUN docker-php-ext-install pdo pdo_pgsql
 
 RUN pecl install xdebug-2.6.1 && docker-php-ext-enable xdebug
 
