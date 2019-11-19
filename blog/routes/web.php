@@ -11,4 +11,21 @@
 |
 */
 
-\Illuminate\Support\Facades\Route::any('/', 'Main@main');
+\Illuminate\Support\Facades\Route::group(['middleware' => ['admin', 'can:viewAdminPanel'], 'prefix' => 'admin' , 'as' => 'see-admin-panel'], function () {
+    \Illuminate\Support\Facades\Route::any('/', ['uses' => 'AdminController@showView']);
+});
+
+\Illuminate\Support\Facades\Route::any('/',
+    [
+        'as' => 'home',
+        'uses' => 'Main@main'
+    ]
+);
+\Illuminate\Support\Facades\Route::get('/login-admin',     [
+    'as' => 'LoginForAdmin',
+    'uses' => 'LoginController@loginView'
+]);
+
+\Illuminate\Support\Facades\Route::post('/login-admin', 'LoginController@loginAdmin');
+
+

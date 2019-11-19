@@ -17,5 +17,4 @@ class PageBuilderFacade extends Facade
     {
         return 'getMenuByType';
     }
-
 }

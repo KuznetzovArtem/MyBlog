@@ -11,8 +11,6 @@ services:
       - 80:80
     depends_on:
       - php
-    links:
-      - php:php
   php:
     build:
       context: .

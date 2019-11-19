@@ -118,8 +118,6 @@
                 </div>
 
 
-
-
                 <div class="row mb-5 mt-5">
 
                     <div class="col-md-12">
@@ -130,7 +128,8 @@
 
                         <div class="post-entry-horzontal">
                             <a href="blog-single.html">
-                                <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url(images/img_10.jpg);"></div>
+                                <div class="image element-animate" data-animate-effect="fadeIn"
+                                     style="background-image: url(images/img_10.jpg);"></div>
                                 <span class="text">
                       <div class="post-meta">
                         <span class="category">Travel</span>
@@ -145,7 +144,8 @@
 
                         <div class="post-entry-horzontal">
                             <a href="blog-single.html">
-                                <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url(images/img_11.jpg);"></div>
+                                <div class="image element-animate" data-animate-effect="fadeIn"
+                                     style="background-image: url(images/img_11.jpg);"></div>
                                 <span class="text">
                       <div class="post-meta">
                         <span class="category">Lifestyle</span>
@@ -160,11 +160,12 @@
 
                         <div class="post-entry-horzontal">
                             <a href="blog-single.html">
-                                <div class="image element-animate"  data-animate-effect="fadeIn" style="background-image: url(images/img_12.jpg);"></div>
+                                <div class="image element-animate" data-animate-effect="fadeIn"
+                                     style="background-image: url(images/img_12.jpg);"></div>
                                 <span class="text">
                       <div class="post-meta">
                         <span class="category">Food</span>
-                        <span class="mr-2">March 15, 2018 </span> &bullet;
+                        <span class="mr-2">March 15, 2018 </span>
                         <span class="ml-2"><span class="fa fa-comments"></span> 3</span>
                       </div>
                       <h2>There’s a Cool New Way for Men to Wear Socks and Sandals</h2>
@@ -193,7 +194,9 @@
                         <img src="images/person_1.jpg" alt="Image Placeholder" class="img-fluid">
                         <div class="bio-body">
                             <h2>Meagan Smith</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias minus.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem facilis sunt
+                                repellendus excepturi beatae porro debitis voluptate nulla quo veniam fuga sit molestias
+                                minus.</p>
                             <p><a href="#" class="btn btn-primary btn-sm">Read my bio</a></p>
                             <p class="social">
                                 <a href="#" class="p-2"><span class="fa fa-facebook"></span></a>

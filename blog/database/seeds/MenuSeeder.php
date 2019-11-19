@@ -6,7 +6,7 @@
  * Time: 18:07
  */
 
-class MenuSeeder
+class MenuSeeder extends \Illuminate\Database\Seeder
 {
     public function run()
     {
@@ -16,6 +16,8 @@ class MenuSeeder
         \Illuminate\Support\Facades\DB::table('menu')->insert([
             'name' => 'admin'
         ]);
+        \Illuminate\Support\Facades\DB::table('menu')->insert([
+            'name' => 'development'
+        ]);
     }
-
 }

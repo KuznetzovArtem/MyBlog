@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             MenuSeeder::class,
             MenuElementsSeeder::class,
-            UserSeeder::class,
+            RoleSeeder::class,
         ]);
     }
 }

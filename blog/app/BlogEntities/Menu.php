@@ -10,13 +10,10 @@ namespace App\BlogEntities;
 
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
 
 class Menu extends Model
 {
-    protected $table = 'menus';
-
-    protected $entity;
+    protected $table = 'menu';
 
     public function __construct(array $attributes = [])
     {
@@ -27,5 +24,10 @@ class Menu extends Model
     public function getItems()
     {
         return $this->hasMany(MenuItems::class)->get();
+    }
+
+    public function getItemsByMenuId()
+    {
+
     }
 }

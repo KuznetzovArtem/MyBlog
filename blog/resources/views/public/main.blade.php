@@ -1,7 +1,10 @@
 @extends('layouts.public.main')
 
 @section('header')
-    @include('public.sections.header.header')
+    @include('public.sections.header.header', [
+    'title' => $title,
+    'menu' => $menu
+    ])
 @endsection
 
 @section('content')

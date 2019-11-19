@@ -8,14 +8,23 @@
 
 namespace App\Services\PageBuildServices;
 
-
 use App\BlogEntities\Menu;
-use Illuminate\Support\Facades\DB;
 
 class MenuBuildService
 {
+    /**
+     * @param $type
+     * @return mixed|Menu
+     */
     public function getMenuByType($type)
     {
-        return Menu::where('name', '=', $type);
+        $menu = Menu::where('name', '=', $type)->first();
+        $items = $menu->getItems();
+        foreach ($items as $item) {
+            $item->initSubItems();
+        }
+
+        return $items;
     }
+
 }
